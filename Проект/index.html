@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Проект/style.css">
+    <script src="../Проект/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="for_logo">
+            <img src="./assets/yelobank-logo_2.png" alt="bank_logo">
+        </div>
+        <nav>
+            <ul class="navigation">
+                <li>Главная</li>
+                <li>О нас</li>
+                <li><a href="#calc">Онлайн калькулятор</a></li>
+                <li>Услуги</li>
+                <li>Контакты</li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container" id="calc">
+        <form action="">
+            <div class="forLabel">
+                <label for="first">Начальная сумма вклада (Р)</label>
+                <label for="second">Сумма ежемесячного пополнения (Р)</label>
+                <label for="third">Процентная ставка (%)</label>
+                <label for="fourth">Срок вклада (дней)</label>
+            </div>
+            <div class="forInput">
+                <input type="text" id="first" placeholder="Начальная сумма вклада">
+                <input type="text" id="second" placeholder="Сумма ежемесячного пополнения">
+                <input type="text" id="third" placeholder="Процентная ставка">
+                <input type="text" id="fourth" placeholder="Срок вклада">
+            </div>
+        </form>
+        <button>Рассчитать</button>
+        <h1 class="hidden">Введите данные правильно!</h1>
+        <div class="showResult"></div>
+    </main>
+    <footer>
+        <div class="for_logo">
+            <img src="./assets/yelobank-logo_2.png" alt="bank_logo">
+        </div>
+        <p>Баку 2022</p>
+    </footer>
+</body>
+</html>

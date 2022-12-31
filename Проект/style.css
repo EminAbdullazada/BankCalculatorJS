@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+    font-size: 20px;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    color:goldenrod;
+  }
+  body {
+    background-color: #212124;
+  }
+  header{
+      margin: 0 auto;
+      width: 95%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 100px;
+      padding-top: 10px;
+  }
+  ul{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      list-style: none;
+      color:goldenrod;
+  }
+  ul li {
+      cursor: pointer;
+      transition: .3s all ease-in-out;
+  }
+  ul li a{
+      text-decoration: none;
+      transition: .3s all ease-in-out;
+      cursor: pointer;
+      color:goldenrod;
+  }
+  li:hover , a:hover{
+      color:palevioletred;
+  }
+  
+  .for_logo{
+      width: 150px;
+  }
+  .for_logo img{
+      width: 100%;
+      border-radius: 50%;
+  }
+  .container{
+      margin: 0 auto;
+      margin-top: 50px;
+      width: 55%;
+      padding: 50px;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 60px;
+      border: 1px solid goldenrod;
+      background-color: black;
+  }
+  button {
+      width: 30%;
+      border-radius: 25px;
+      cursor: pointer;
+      background-color:goldenrod;
+      color:black;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border: 1px solid black;
+      transition: .3s all ease-in-out;
+  }
+  button:hover{
+      transform: translateY(-10px);
+      background-color: black;
+      color:goldenrod;
+      border: 1px solid goldenrod;
+  }
+  form{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap:20px;
+      width: 100%;
+  }
+  .forLabel{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap:20px;
+  }
+  input{
+      background-color: #212124;
+      border: 1px solid goldenrod;
+      color:goldenrod;
+      background-color: black;
+      width: 300px;
+  }
+  label{
+      color:goldenrod;
+  }
+  input , label {
+      cursor: pointer;
+  }
+  ::placeholder{
+      color:goldenrod;
+      font-size: .8rem;
+      font-weight: 100;
+      padding-left: 5px;
+  }
+  .forInput {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap:20px;
+  }
+  
+  h1{
+      color:goldenrod;
+      transition: all ease-in-out 0.2s;
+  }
+  
+  .hidden{
+      opacity: 0;
+      font-size: 1px;
+  }
+  
+  .shown{
+      opacity: 1;
+      font-size: 1rem;
+      display: block;
+  }
+  .showResult { 
+      padding: 20px;
+      border-radius: 25px;;
+      border: 2px solid goldenrod;
+  }
+  footer{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 50px;
+  }
+  footer > p{
+      font-size: 20px;
+      font-weight: bold;
+  }
+  
