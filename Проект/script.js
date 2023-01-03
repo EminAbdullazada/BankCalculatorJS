@@ -46,20 +46,22 @@ const thirdInput = document.querySelector("#third");
 const fourthInput = document.querySelector("#fourth");
 // Also need to get div for showing result of calculate
 const block = document.querySelector(".showResult");
+// Get the hidden <h1> from HTML
+let msg = document.querySelector(".hidden");
 ///////////////////////////////////////////////
 // Get a button from HTML and addEventListener
 const button = document.querySelector("button").addEventListener("click",press=>{
     console.clear();
     let myResult = getResult();
+    let resultToPrint = ResultToPrint(myResult);
     
     if(checkValues()){
         block.innerHTML = " ";
         block.insertAdjacentHTML (
             "beforeend",
-            `<p>Результат подсчета : ${myResult["Сумма вклада на момент окончания срока"]} ₽ </p>`
+            `<p>${resultToPrint[0]} <br/> ${resultToPrint[1]} <br/> ${resultToPrint[2]} </p>`,
             )
-            console.log(myResult);
-        
+            console.log(myResult);   
     }
     else block.innerHTML= " ";
 })
@@ -89,8 +91,7 @@ let getMonthFromDays = (days) => {
     return Math.floor(days / 30);
 }
 // And now we need a function which 'll check the values of the inputs
-// Get the hidden <h1> from HTML
-let msg = document.querySelector(".hidden");
+
 function checkValues(){
     if(firstInput.value <= 0 || isNaN(firstInput.value) ||
        secondInput.value <= -1 || isNaN(secondInput.value) ||
@@ -103,8 +104,8 @@ function checkValues(){
        return false
        }
        else{
-        msg.classList.add("shown");
-        msg.classList.remove("hidden");
+        msg.classList.remove("shown");
+        msg.classList.add("hidden");
         return true;
        }
 }
@@ -113,4 +114,12 @@ function checkValues(){
 
 
 
+function ResultToPrint(resultObject)
+{
+    let arrOfResults = [];
+    arrOfResults.push("Сумма вклада на момент окончания срока: "+ resultObject["Сумма вклада на момент окончания срока"])
+    arrOfResults.push("Сумма пополнений: "+ resultObject["Сумма пополнений"])
+    arrOfResults.push("Начисленные проценты:"+resultObject["Начисленные проценты"])
+    return arrOfResults;
+}
 
