@@ -91,7 +91,7 @@ let getMonthFromDays = (days) => {
     return Math.floor(days / 30);
 }
 // And now we need a function which 'll check the values of the inputs
-
+////////////////////////////////////////
 function checkValues(){
     if(firstInput.value <= 0 || isNaN(firstInput.value) ||
        secondInput.value <= -1 || isNaN(secondInput.value) ||
@@ -109,17 +109,13 @@ function checkValues(){
         return true;
        }
 }
-
-
-
-
-
+////////////////////////////////////////
 function ResultToPrint(resultObject)
 {
     let arrOfResults = [];
-    arrOfResults.push("Сумма вклада на момент окончания срока: "+ resultObject["Сумма вклада на момент окончания срока"])
-    arrOfResults.push("Сумма пополнений: "+ resultObject["Сумма пополнений"])
-    arrOfResults.push("Начисленные проценты:"+resultObject["Начисленные проценты"])
+    arrOfResults.push("Сумма вклада на момент окончания срока: "+ resultObject["Сумма вклада на момент окончания срока"] + " Р")
+    arrOfResults.push("Сумма пополнений: "+ resultObject["Сумма пополнений"] + " P")
+    arrOfResults.push("Начисленные проценты:"+resultObject["Начисленные проценты"] + " Р")
     return arrOfResults;
 }
 
