@@ -92,13 +92,17 @@ let getMonthFromDays = (days) => {
 }
 // And now we need a function which 'll check the values of the inputs
 ////////////////////////////////////////
+
 function checkValues(){
     if(firstInput.value <= 0 || isNaN(firstInput.value) ||
        secondInput.value <= -1 || isNaN(secondInput.value) ||
-       thirdInput.value <= 0 ||isNaN(thirdInput.value) ||
+       thirdInput.value <= 28 ||isNaN(thirdInput.value) ||
        fourthInput.value <=0 || isNaN(fourthInput.value))
        {
-       console.log("Вводимые данные должны быть только положительными числами !!!");
+       console.log(
+        "Вводимые данные должны быть только положительными числами !! " ,
+        "Срок вклада не меньше одного месяца !!!"
+        );
        msg.classList.remove("hidden");
        msg.classList.add("shown");
        return false
